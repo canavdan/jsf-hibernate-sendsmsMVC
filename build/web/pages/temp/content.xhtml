@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+          
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <body>
+	    <ui:composition>
+
+		 <h:form>
+        <h2 style="color: darkblue;">Sent Sms</h2>
+        <h2 style="color: darkblue">
+            <h:outputText value="#{s.username}" /></h2>
+       
+            <h:panelGrid columns="4">
+
+                Number: <h:inputText id="toID" value="#{s.to}" required="true" size="15">
+                </h:inputText>
+                <h:commandButton immediate="true" value="Choose from Contact" action="contacts">
+                <!--<f:setPropertyActionListener target="#{b.username}" value="#{l.username}"/>-->
+                </h:commandButton>
+                <h:message for="toID" id="toIDerror" style="color: red" />
+
+                Message <h:inputTextarea id="mID" value="#{s.message}" required="true">
+                </h:inputTextarea>
+                <h:outputText value=""/>
+                <h:message for="mID" id="mIDerror" style="color: red" />
+
+                <h:commandButton value="Sent" action="#{s.sentSms()}"/>
+                <h:button  value="Sent2" onclick="#{s.sentSms()}" >     
+                </h:button>
+
+                <h:commandButton immediate="true" value="Reset" type="reset" action="#{s.clear()}"/>
+            </h:panelGrid>
+
+        </h:form>
+
+	    </ui:composition>
+    </body>
+</html>
+

@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+          
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <body>
+	    <ui:composition>
+<h:form>
+		<ul id="navlist">
+                    <li id="active"><h:link value="Home Page" outcome="index"/></li>
+                        <li><h:link value="Settings" outcome="settings"/></li>
+                        <li><h:link value="Profile" outcome="myprofile"/></li>
+                        <li><h:link value="Log out" outcome="login"/></li>    
+                        <li><h:outputText style="color: white;" value="Welcome   "/> 
+                            <h:outputText style="color: white;" value=" #{b.username}"/></li>
+                    </ul>
+</h:form>
+	    </ui:composition>
+    </body>
+</html>
+
+

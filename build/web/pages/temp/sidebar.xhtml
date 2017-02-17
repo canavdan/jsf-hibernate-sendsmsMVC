@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <body>
+        <ui:composition>
+            <h:form>
+                <h2>SMS </h2>
+                <div class="sidemenu">
+                      <h:form>
+                    <ul>
+                        <li><h:link value="Sent SMS" outcome="sentsms"/></li>                      
+                        <li><h:link value="Message History" outcome="mhistory"/></li>
+                        <li><h:link value="Sent Multi SMS" outcome="multisms"/></li>
+                        <li><h:link value="Unsent Messages" outcome="unsentm"/></li>
+                        <li><h:link value="Messages Credits" outcome="leftcredits"/></li>
+                    </ul>
+                            </h:form>
+                </div>
+                <h2>Contacts</h2>
+                <div class="sidemenu">
+                    <ul>
+                        <li><h:link value="My Contacts" outcome="contacts"/></li>
+                        <li><h:link value="Add Contacts" outcome="addcontact"/></li>
+                        <li><h:link value="Export Contacts" outcome="exportc"/></li>
+                        <li><h:link value="Import Contacts" outcome="importc"/></li>              
+                    </ul>
+                </div>
+                <h2>Settings</h2>
+                <div class="sidemenu">
+                    <ul>
+                        <li><h:link value="Messages Credits" outcome="leftcredits"/></li>
+                        <li><h:link value="Setting" outcome="settings"/></li>
+                        <li><h:link value="Profile" outcome="myprofile"/></li>
+                        <li><h:link value="Log Out" outcome="login"/></li>
+                    </ul>
+                </div>
+            </h:form>
+        </ui:composition>
+    </body>
+</html>
+

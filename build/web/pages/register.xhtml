@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Register</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="Casual Signup Form Widget Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <!-- fonts -->
+        <link href="//fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet"/>
+        <!-- /fonts -->
+        <!-- css -->             
+    </h:head>
+    <h:body onload="#{r.clear()}">
+        <h:form >
+            <h:outputStylesheet library="css" name="register.css"/>
+
+            <h1 class="header-w3ls w3layouts w3 w3l agileinfo wthree w3-agileits">Register Form</h1>
+            <div class="content-w3ls"><!---->
+                <div class="agileits1">
+                    <div class="w3-agileits">
+                        <h3>Please Register Your Details</h3>                     
+                        
+                        
+                        <div class="form-control"> 
+                            <label class="header">Username :</label>
+                            <p:inputText value="#{r.username}" validator="#{r.validateUserName}" id="usernameR"  title="Please enter your Company Name">
+                                <p:ajax event="blur" update="usernameRR"/>
+                               <!-- <f:ajax event="blur" execute="usernameR" render="usernameError"/>-->
+                            </p:inputText>   
+                            <p:message for="usernameR" id="usernameRR" style="color: red"/>
+                            <div class="clear"></div>
+                        </div>
+                       
+                        <div class="form-control">	
+                            <label class="header">Your Password :</label>
+                            <p:password value="#{r.password}" id="passwordR3" required="true"
+                                        feedback="true" label="Password 1">
+                                <f:validateLength minimum="6"/>
+                                <p:ajax event="blur" update="msgpasswordR3"/> </p:password>
+                          <p:message for="passwordR3" id="msgpasswordR3" style="color: red"/>
+                           
+                            <div class="clear"></div>
+                        </div>
+                        
+                       <!-- <div class="form-control">		
+                            <label class="header">Confirm Password :</label>
+                            <p:password label="Password 2" match="passwordR3"   id="passwordR2" value="#{r.password2}" feedback="true" >
+                                <p:ajax event="blur" update="msgpasswordR2"/> 
+                            </p:password>
+                          
+                            <h:outputText id="msgpasswordR2" value="#{r.password2}" />
+                            <div class="clear"></div>
+                        </div>-->
+                            
+                        <div class="form-control">
+                            <label class="header">*Your Name :</label>
+                            <p:inputText value="#{r.name}" required="true" id="name" requiredMessage="Not empty"
+                                         validator="#{r.validateName}" title="Please enter your name"> 
+                                <p:ajax event="blur" update="nameError"/>
+                            </p:inputText>   
+                            <p:message for="name" id="nameError" style="color: red"/>
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="form-control">	
+                            <label class="header">Surname :</label>
+                            <p:inputText value="#{r.surname}"  id="surname"  title="Please enter surname"/>
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="form-control">
+                            <label class="header">Adress :</label>
+                            <p:inputTextarea value="#{r.adress}" required="true" requiredMessage="Not empty"
+                                             id="adress"  title="Please enter your adress"/>  
+                            <p:message for="adress" id="adressError" style="color: red"/>
+                            <div class="clear"></div>
+                        </div>	
+                        <div class="form-control">
+                            
+                            <label class="header">Mobile Number :</label>
+                            <p:inputText value="#{r.number}" id="number" required="true" requiredMessage="Not empty"
+                                         validator="#{r.validateNumber}" title="Please enter phone">
+                                <p:ajax event="blur" update="numberError"/>        
+                            </p:inputText>   
+                            <p:message for="number" id="numberError" style="color: red"/>
+                            <div class="clear"></div>
+                        </div>
+
+                        <div class="form-control">
+                            <label class="header">E-mail :</label>
+                            <p:inputText value="#{r.country}" required="true" requiredMessage="Not empty"
+                                         validator="#{r.validateMail}" id="mail"  title="Please enter your e-mail">                         
+                                <p:ajax event="blur" update="mailError"/>
+                            </p:inputText> 
+                            <p:message for="mail" id="mailError" style="color: red"/>
+                            <div class="clear"></div>
+                        </div>	
+                        <p:commandButton value="Register" class="register" action="#{r.addUserDatabase()}"/>   
+
+                    </div>
+                </div>	
+                <div class="agileits2">
+
+                </div>
+                <div class="clear"></div>
+            </div>	
+            <p class="copyright w3layouts w3 w3l agileits-w3layouts agile w3-agile">© 2017 Casual Signup Form. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">W3layouts</a></p>
+        </h:form>
+    </h:body>
+</html>
+
