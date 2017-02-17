@@ -6,4 +6,4 @@ To sent message with this program,you need to have an account http://www.bulksms
 in /src/java/beans/sentSMSBean and /src/java/beans/sentSMSBean/multismsBean find yourusername and yourpassword parameters and change it
 with your username and password.
 
-<img src="https://github.com/canavdan/jsf-hibernate-sendsmsMVC/blob/master/login.png?raw=true"/>
+<img width="15%" src="https://github.com/canavdan/jsf-hibernate-sendsmsMVC/blob/master/login.png?raw=true"/>
