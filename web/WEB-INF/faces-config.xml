@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <navigation-rule>
+        <description>Form home page</description>
+                    
+        <navigation-case>
+            <from-outcome>index</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>settings</from-outcome>
+            <to-view-id>/pages/settings.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>myprofile</from-outcome>
+            <to-view-id>/pages/myprofile.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>login</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>sentsms</from-outcome>
+            <to-view-id>/pages/sentsms.xhtml</to-view-id>
+              <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>multisms</from-outcome>
+            <to-view-id>/pages/multisms.xhtml</to-view-id>
+              <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>mhistory</from-outcome>
+            <to-view-id>/pages/mhistory.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>unsentm</from-outcome>
+            <to-view-id>/pages/unsentm.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>leftcredits</from-outcome>
+            <to-view-id>/pages/leftcredits.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>     
+        <navigation-case>
+            <from-outcome>contacts</from-outcome>
+            <to-view-id>/pages/contacts.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>addcontact</from-outcome>
+            <to-view-id>/pages/addcontact.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>exportc</from-outcome>
+            <to-view-id>/pages/exportc.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>importc</from-outcome>
+            <to-view-id>/pages/importc.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+         <navigation-case>
+            <from-outcome>sent</from-outcome>
+            <to-view-id>/pages/sent.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+          <navigation-case>
+            <from-outcome>about</from-outcome>
+            <to-view-id>/pages/about.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+          <navigation-case>
+            <from-outcome>contact</from-outcome>
+            <to-view-id>/pages/contacts.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <description>From Login
+        </description>
+        <from-view-id>/login.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>register</from-outcome>
+            <to-view-id>/pages/register.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>index</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>login</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    
+    
+    <navigation-rule>
+        <from-view-id>/pages/register.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>added</from-outcome>
+            <to-view-id>/pages/added.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    
+    
+    <navigation-rule>
+        <description>From added</description>
+        <from-view-id>/pages/added.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>login</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    
+   
+</faces-config>

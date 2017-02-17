@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>My Profile</title>
+    </h:head>
+    <h:body onload="#{pB.data()}">
+        <h:form>
+            <h:outputStylesheet library="css" name="style.css"/>
+            <div id="container">
+                <div id="topimg">
+                    <h1>SMS INTEGRATION</h1>
+                </div>
+                <div id="navcontainer">
+                    <ul id="navlist">
+                        <li id="active"><h:commandLink value="Home Page" action="index"/></li>
+                        <li><h:commandLink value="Settings" action="settings"/></li>
+                        <li><h:commandLink value="My Profile" action="myprofile"/></li>
+                        <li><h:commandLink value="Log out" action="login"/></li>        
+                    </ul>
+                </div>
+                <div style="clear:both;"></div>
+                <div id="sidebar">
+                    <h2>SMS </h2>
+                    <div class="sidemenu">
+                        <ul>
+                            <li><h:commandLink value="Sent SMS" action="sentsms"/></li>
+                            <li><h:commandLink value="Sent Multi SMS" action="multisms"/></li>
+                            <li><h:commandLink value="Message History" action="mhistory">
+                                    <f:setPropertyActionListener value="#{l.username}" target="#{c.username}"/>
+                                </h:commandLink></li>
+                            <li><h:commandLink value="Unsent Messages" action="unsentm"/></li>
+                            <li><h:commandLink value="Messages Credits" action="leftcredits"/></li>
+                        </ul>
+                    </div>
+                    <h2>Contacts</h2>
+                    <div class="sidemenu">
+                        <ul>
+                            <li><h:commandLink value="My Contacts" action="contacts">
+                                    <f:setPropertyActionListener value="#{l.username}" target="#{b.username}"/>
+                                </h:commandLink></li>
+                            <li><h:commandLink value="Add Contacts" action="addcontact"/></li>
+                            <li><h:commandLink value="Export Contacts" action="exportc"/></li>
+                            <li><h:commandLink value="Import Contacts" action="importc"/></li>
+                        </ul>
+                    </div>
+                    <h2>Settings</h2>
+                    <div class="sidemenu">
+                        <ul>
+                            <li><h:commandLink value="Messages Credits" action="leftcredits"/></li>
+                            <li><h:commandLink value="Setting" action="settings"/></li>
+                            <li><h:commandLink value="Profile" action="myprofile"/></li>
+                            <li><h:commandLink value="Log Out" action="login"/></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="content">
+                    <h2 style="color: darkblue;">My Profile</h2>
+                    <h:form>
+                        <table >
+                            <tr>
+                                <td>Username:</td>
+                                <td><h:outputText value="#{pB.username}"/></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Password:</td>
+                                <td><h:commandButton value="Change" action="#{pB.up()}" rendered="#{pB.update}"/></td>
+                                <td><h:inputSecret value="#{pB.password}" rendered="#{not pB.update}" required="true"/></td>
+                            </tr>
+                            <tr>
+                                <td>Name:</td>
+                                <td><h:inputText value="#{pB.name}" required="true" id="nameID"/></td>
+                                <td><h:message for="nameID"  style="color: red" /></td>
+                            </tr>
+                            <tr>
+                                <td>Surname:</td>
+                                <td><h:inputText value="#{pB.surname}" required="true" id="surnameID"/></td>
+                                <td><h:message for="surnameID" style="color: red"/></td>
+                            </tr>
+                            <tr>
+                            <td>Adress:</td>
+                            <td><h:inputText value="#{pB.adress}" required="true" id="adressID"/></td>
+                            <td><h:message for="addressID"  style="color: red" /></td>
+                            </tr>
+                            <tr>
+                            <td>E-Mail:</td>
+                            <td><h:inputText value="#{pB.email}" size="25" validator="#{pB.validateMail}" id="mailID">
+                                    <f:ajax execute="mailID" event="blur" render="mailError"/> 
+                                </h:inputText>
+                            </td>
+                            <td><h:message for="mailID" id="mailError"  style="color: red" /></td>              
+                           </tr>
+                            <tr>
+                                <th><h:commandButton value="Change" action="#{pB.change()}"/></th>
+                                <th><h:commandButton value="Reset" action="#{pB.reset()}"/></th>
+                            </tr>
+                        </table>
+
+
+                    </h:form>
+
+                </div>
+                <div id="footer"> <a href="#">Homepage</a> | 
+                    <a href="mailto:gameuserrs@yandex.com">Contact</a> | 
+                    <a href="http://validator.w3.org/check?uri=referer">Html</a> |
+                    <a href="http://jigsaw.w3.org/css-validator">Css</a> | &copy; 2007 Anyone | Design by 
+                    <a href="http://www.mitchinson.net"> www.mitchinson.net</a><br/>
+                    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>
+                </div>
+            </div>
+        </h:form>
+    </h:body>
+</html>
+
